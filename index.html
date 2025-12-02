@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Dreaming - Dream Changes</title>
+    <link rel="stylesheet" href="style1.css">
+ 
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <svg class="star" viewBox="0 0 24 24" fill="black">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span>HELLO!</span>
+                </div>
+                
+                <input type="text" class="search-box" placeholder="Navegar em nosso site...">
+                
+                <button class="btn-cadastro" onclick="showPage('cadastro')">CADASTRAR-SE</button>
+            </div>
+            
+            <div class="header-nav">
+                <div class="nav-links">
+                    <button onclick="showPage('comentarios')">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        Comentários
+                    </button>
+                    <button onclick="showPage('sobre')">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="16" x2="12" y2="12"/>
+                            <line x1="12" y1="8" x2="12.01" y2="8"/>
+                        </svg>
+                        Sobre nós
+                    </button>
+                    <button onclick="showPage('contato')">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        Contato
+                    </button>
+                </div>
+                
+                <div class="dark-mode-toggle">
+                    <span>Modo</span>
+                    <div class="toggle-switch" id="darkModeToggle" onclick="toggleDarkMode()">
+                        <div class="slider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+ 
+    <!-- pagina inicial -->
+    <div id="home" class="page active">
+        <div class="container">
+            <svg class="decorative-svg" style="left: 0; top: 50px;" width="150" height="300" viewBox="0 0 150 300">
+                <path d="M50,50 Q30,100 50,150 T50,250" fill="none" stroke="black" stroke-width="2"/>
+                <circle cx="50" cy="50" r="15" fill="black" opacity="0.3"/>
+                <circle cx="40" cy="100" r="12" fill="black" opacity="0.3"/>
+                <circle cx="60" cy="150" r="10" fill="black" opacity="0.3"/>
+                <circle cx="45" cy="200" r="14" fill="black" opacity="0.3"/>
+            </svg>
+            
+            <h1 class="main-title">Night Dreaming,<br>Dream Changes</h1>
+            
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2 style="font-size: 32px; margin-bottom: 25px; color: #374151;">O Que é Tarot?</h2>
+                    <p style="color: #4b5563; line-height: 1.8; margin-bottom: 20px;">
+                        O Tarot é um sistema milenar de 78 cartas divididas em Arcanos Maiores (22 cartas) e Arcanos Menores (56 cartas). Cada carta carrega símbolos, arquétipos e significados profundos que nos ajudam a compreender aspectos da vida, emoções e situações.
+                    </p>
+                    <p style="color: #4b5563; line-height: 1.8; margin-bottom: 20px;">
+                        Os Arcanos Maiores representam grandes temas e jornadas da vida humana, enquanto os Arcanos Menores tratam de situações cotidianas e aspectos práticos.
+                    </p>
+                    <p style="color: #4b5563; line-height: 1.8;">
+                        O Tarot não prevê o futuro de forma fixa, mas oferece perspectivas, orientações e reflexões sobre o momento presente e possíveis caminhos futuros baseados nas escolhas atuais.
+                    </p>
+                </div>
+                
+                <div class="sidebar">
+                    <h3 style="font-size: 24px; margin-bottom: 20px; color: #374151;">Cartas Principais</h3>
+                    <div class="card">
+                        <h4>O Louco (0)</h4>
+                        <p>Novos começos, espontaneidade, fé no universo</p>
+                    </div>
+                    <div class="card">
+                        <h4>O Mago (I)</h4>
+                        <p>Manifestação, poder pessoal, recursos disponíveis</p>
+                    </div>
+                    <div class="card">
+                        <h4>A Sacerdotisa (II)</h4>
+                        <p>Intuição, mistério, sabedoria interior</p>
+                    </div>
+                    <div class="card">
+                        <h4>A Imperatriz (III)</h4>
+                        <p>Abundância, natureza, criatividade</p>
+                    </div>
+                    <div class="card">
+                        <h4>O Imperador (IV)</h4>
+                        <p>Autoridade, estrutura, estabilidade</p>
+                    </div>
+                </div>
+            </div>
+            
+            <svg class="decorative-svg" style="right: 50px; bottom: 50px;" width="200" height="100" viewBox="0 0 200 100">
+                <path d="M10,50 Q50,20 90,50 T170,50" fill="none" stroke="black" stroke-width="3" opacity="0.3"/>
+            </svg>
+        </div>
+    </div>
+ 
+    <!-- logingingin -->
+    <div id="login" class="page">
+        <div class="form-container">
+            <h2 class="form-title">Entrar</h2>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="seu@email.com">
+            </div>
+            <div class="form-group">
+                <label>Senha</label>
+                <input type="password" placeholder="••••••••">
+            </div>
+            <button class="btn-submit" onclick="alert('Login realizado!')">Entrar</button>
+            <div class="form-footer">
+                Não tem conta? <button onclick="showPage('cadastro')">Cadastre-se</button>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- telinha cads -->
+    <div id="cadastro" class="page">
+        <div class="form-container">
+            <h2 class="form-title">Cadastrar-se</h2>
+            <div class="form-group">
+                <label>Nome Completo</label>
+                <input type="text" placeholder="Seu nome">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="seu@email.com">
+            </div>
+            <div class="form-group">
+                <label>Senha</label>
+                <input type="password" placeholder="••••••••">
+            </div>
+            <div class="form-group">
+                <label>Confirmar Senha</label>
+                <input type="password" placeholder="••••••••">
+            </div>
+            <button class="btn-submit" onclick="alert('Cadastro realizado!')">Criar Conta</button>
+            <div class="form-footer">
+                Já tem conta? <button onclick="showPage('login')">Entre aqui</button>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- sobreeee -->
+    <div id="sobre" class="page">
+        <div class="about-container">
+            <h2 class="section-title">Sobre Nós</h2>
+            <div class="about-content">
+                <p>
+                    Bem-vindo ao <strong>Night Dreaming, Dream Changes</strong> - seu portal de descoberta e conexão com o mundo místico do Tarot.
+                </p>
+                <p>
+                    Criamos este espaço para todos que buscam autoconhecimento, orientação espiritual e compreensão mais profunda sobre os caminhos da vida. Seja você um iniciante curioso ou um praticante experiente, aqui encontrará recursos, interpretações e uma comunidade acolhedora.
+                </p>
+                <p>
+                    Nossa missão é desmistificar o Tarot e torná-lo acessível a todos, mostrando que essas cartas ancestrais são ferramentas poderosas de reflexão, não de medo. Através dos símbolos e arquétipos, você pode iluminar aspectos ocultos de sua jornada e tomar decisões mais conscientes.
+                </p>
+                <p>
+                    Os sonhos da noite trazem mudanças - e estamos aqui para guiá-lo nessa transformação.
+                </p>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- commentsssssssssssssssssssssssss -->
+    <div id="comentarios" class="page">
+        <div class="comments-container">
+            <h2 class="section-title">Comentários</h2>
+            
+            <div class="comment">
+                <div class="comment-header">
+                    <div class="avatar">M</div>
+                    <div class="comment-body">
+                        <h4>Maria Silva</h4>
+                        <div class="comment-date">Há 2 dias</div>
+                        <p class="comment-text">O site me ajudou muito a entender melhor as cartas! As explicações são claras e diretas. Recomendo para iniciantes!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comment">
+                <div class="comment-header">
+                    <div class="avatar">J</div>
+                    <div class="comment-body">
+                        <h4>João Pedro</h4>
+                        <div class="comment-date">Há 5 dias</div>
+                        <p class="comment-text">Sempre tive curiosidade sobre Tarot mas tinha medo. Aqui encontrei um espaço acolhedor e sem julgamentos. Muito obrigado!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comment">
+                <div class="comment-header">
+                    <div class="avatar">A</div>
+                    <div class="comment-body">
+                        <h4>Ana Carolina</h4>
+                        <div class="comment-date">Há 1 semana</div>
+                        <p class="comment-text">Excelente conteúdo! Estudo Tarot há anos e ainda aprendo coisas novas aqui. A comunidade é incrível!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comment-form">
+                <h3>Deixe seu comentário</h3>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Compartilhe sua experiência..."></textarea>
+                </div>
+                <button class="btn-submit" onclick="alert('Comentário enviado!')">Enviar Comentário</button>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- CONTATO PAGE -->
+    <div id="contato" class="page">
+        <div class="contact-container">
+            <h2 class="section-title">Contato</h2>
+            <div class="form-container" style="margin-top: 0;">
+                <p style="text-align: center; color: #374151; margin-bottom: 30px;">Entre em contato conosco. Estamos aqui para ajudar!</p>
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input type="text" placeholder="Seu nome">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="seu@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Assunto</label>
+                    <input type="text" placeholder="Sobre o que deseja falar?">
+                </div>
+                <div class="form-group">
+                    <label>Mensagem</label>
+                    <textarea rows="5" placeholder="Sua mensagem..."></textarea>
+                </div>
+                <button class="btn-submit" onclick="alert('Mensagem enviada!')">Enviar Mensagem</button>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="script1.js">
+ 
+    </script>
+</body>
+</html>
+ 

@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #0b0b0d;
+    --panel: #121214;
+    --muted: #9aa3b2;
+    --accent: #4a90e2;
+    --text: #f5f7fa;
+    --radius: 8px;
+    --gap: 12px;
+}
+
+/* Animaçõesssssssss */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* cabo bb */
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: var(--text);
+    color: var(--bg);
+    line-height: 1.4;
+    padding: 9px;
+}
+
+header {
+    position: relative;
+    border: 2px solid var(--bg);
+    border-radius: 10px;
+    padding: 8px;
+    animation: fadeInDown 0.6s ease-out;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    padding: 8px 12px;
+    gap: 12px;
+    background: var(--text);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.header-greeting {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2px;
+    font-size: 200%;
+    order: 1;
+    animation: slideInRight 0.6s ease-out 0.1s both;
+}    
+
+#greetingText {
+    font-weight: 600;
+    color: var(--bg);
+}
+
+.authLink {
+    display: inline-block;
+    color: var(--bg);
+    text-decoration: none;
+    font-size: 2.05rem;
+    padding: 8px 10px;
+    font-size: 1.05rem;
+    min-width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform .12s ease;
+    text-align: center;
+    background: var(--accent);
+    border: 1px solid var(--panel);
+    animation: slideInRight 0.6s ease-out 0.2s both;
+}
+
+.authLink:hover {
+    transform: translateY(-2x);
+    box-shadow: 0 8px 16px rgba(74, 144, 226, 0.3);
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.logouser {
+    width: 50px;
+    height: 50px;
+}
+
+.search-web {
+    width: 300px;
+    height: 35px;
+    border-radius: 8px;
+    border: 1px solid var(--bg);
+    padding: 5px 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+    margin-left: 300px;
+    animation: scaleIn 0.6s ease-out 0.3s both;
+    transition: all 0.3s ease;
+}
+
+.search-web:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+}
+
+.search-btn {
+    background: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+.imgbtn {
+    width: 20px;
+    height: 20px;
+}
+
+.search-input {
+    width: 220px;
+    height: 25px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: none;
+    color: var(--bg);
+    margin: 0;
+}
+
+.links {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    order: 3;
+    animation: fadeInDown 0.6s ease-out 0.4s both;
+}
+
+.links a {
+    color: var(--bg);
+    text-decoration: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+   color: var(--accent);
+   transform: translateY(-2px);
+}
+
+#cad {
+    padding: 10px 16px;
+    background: var(--accent);
+    color: #000000;
+    border: 1px solid var(--panel);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 6000;
+    height: 41px;
+    transition: transform .12s ease;
+    animation: slideInRight 0.6s ease-out 0.5s both;
+}
+
+#cad:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(74, 144, 226, 0.4);
+}
+
+.logonight {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 16pxx;
+    animation: scaleIn 0.6s ease-out 0.5s both;
+}
